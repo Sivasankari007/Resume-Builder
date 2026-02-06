@@ -1,0 +1,173 @@
+/* Resume Preview Styles */
+.resume-preview-container {
+    transform-origin: top center;
+    transition: transform 0.2s ease;
+}
+
+.resume-page {
+    width: 210mm;
+    min-height: 297mm;
+    background: white;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    margin: 0 auto;
+    position: relative;
+    /* overflow: hidden;  Allow content to flow if needed, but print might cut */
+}
+
+@media print {
+    @page {
+        margin: 0;
+        size: auto;
+    }
+
+    body {
+        background: white;
+    }
+
+    .header,
+    .editor-section,
+    .no-print {
+        display: none !important;
+    }
+
+    .app-main {
+        height: auto;
+        display: block;
+    }
+
+    .container {
+        max-width: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .editor-layout {
+        display: block;
+        height: auto;
+        overflow: visible;
+    }
+
+    .preview-section {
+        padding: 0 !important;
+        background: white !important;
+        overflow: visible !important;
+        display: block !important;
+    }
+
+    .resume-page {
+        width: 100%;
+        min-height: auto;
+        box-shadow: none;
+        margin: 0;
+        page-break-after: avoid;
+    }
+}
+
+/* Template Styles - Modern Premium */
+.template-modern {
+    display: grid;
+    grid-template-columns: 35% 65%;
+    min-height: 297mm;
+}
+
+.template-sidebar {
+    background-color: hsl(var(--primary));
+    color: #fff;
+    /* Keep white text for now, check contrast */
+    padding: 2rem;
+}
+
+.template-main {
+    padding: 2rem;
+    color: #333;
+}
+
+.resume-name {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    line-height: 1.1;
+    color: hsl(var(--text-main));
+}
+
+.resume-title {
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: hsl(var(--primary));
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.section-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-bottom: 2px solid hsl(var(--primary));
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+    margin-top: 1.5rem;
+    color: hsl(var(--text-main));
+}
+
+.sidebar-section-title {
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+    margin-top: 1.5rem;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.75rem;
+    font-size: 0.9rem;
+}
+
+.skill-tag {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+    font-size: 0.85rem;
+}
+
+.exp-item,
+.edu-item {
+    margin-bottom: 1.5rem;
+}
+
+.item-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.25rem;
+}
+
+.item-title {
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+.item-subtitle {
+    font-weight: 500;
+    color: #555;
+}
+
+.item-date {
+    font-size: 0.85rem;
+    color: #777;
+    font-style: italic;
+}
+
+.item-description {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: #444;
+    white-space: pre-line;
+}

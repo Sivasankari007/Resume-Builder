@@ -1,0 +1,120 @@
+/* Global Variables & Reset */
+:root {
+  /* HSL Color Palette - Pastel Aesthetic */
+  --primary: 260 60% 75%;
+  /* Soft Lavender */
+  --primary-dark: 260 50% 65%;
+  /* Slightly darker lavender for hover */
+  --secondary: 160 50% 80%;
+  /* Pastel Mint */
+  --accent: 340 60% 85%;
+  /* Soft Pink */
+
+  --background: 40 20% 98%;
+  /* Cream/Off-white */
+  --surface: 0 0% 100%;
+  /* White */
+  --surface-hover: 40 20% 96%;
+
+  --text-main: 220 15% 30%;
+  /* Soft Dark Grey */
+  --text-muted: 220 10% 55%;
+  --border: 260 20% 90%;
+  /* Light Lavender Border */
+
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.03);
+  --shadow-md: 0 4px 6px -1px rgba(100, 100, 111, 0.1);
+  --shadow-lg: 0 10px 15px -3px rgba(100, 100, 111, 0.1);
+
+  --radius-sm: 0.5rem;
+  --radius-md: 0.75rem;
+  /* Softer, rounder corners */
+  --radius-lg: 1rem;
+
+  --font-sans: 'Outfit', 'Inter', system-ui, sans-serif;
+  /* Friendly rounded font */
+}
+
+/* Reset & Base Styles */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: hsl(var(--background));
+  color: hsl(var(--text-main));
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-family: inherit;
+}
+
+input,
+textarea,
+select {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/* Typography */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1.1;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Utilities */
+.container {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.gap-4 {
+  gap: 1rem;
+}
+
+.grid {
+  display: grid;
+}
+
+.hidden {
+  display: none;
+}
